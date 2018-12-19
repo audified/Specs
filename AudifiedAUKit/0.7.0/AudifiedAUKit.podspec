@@ -8,8 +8,8 @@ Pod::Spec.new do |s|
     s.source            = { :http => 'https://data.audified.com/downlpublic/temp/KOLT/Pods/AudifiedAUKit-0_7_0.zip' }
     s.preserve_paths	= 'include/*'
     s.ios.deployment_target = '10.0'
-	s.frameworks        = 'UIKit', 'AudioToolbox', 'AVFoundation', 'AudioUnit', 'CoreAudioKit', CoreMidi'
-	s.libraries         = 'boost'
+	s.ios.frameworks        = 'UIKit', 'AudioToolbox', 'AVFoundation', 'CoreAudioKit', 'CoreMidi'
+	s.dependency 'boost', '~> 1.65.1'
 
     s.vendored_frameworks   = 'AudifiedAUKit.framework'
     s.xcconfig              = { "HEADER_SEARCH_PATHS": "\"$$(inherited) {PODS_ROOT}/AudifiedAUKit/include\"" }
